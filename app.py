@@ -24,13 +24,13 @@ class App(tk.Tk):
             self.commandsTable.insert("", tk.END, values=(command.value, ))
 
         self.style = ttk.Style('darkly')
-        self.geometry('680x480')
+        self.geometry('665x460')
         self.title('Распознователь речи')
         self.resizable(0, 0)
 
-        self.textField.grid(row=0, column=0, padx=10, pady=10)
-        self.commandsTable.grid(row=0, column=1, padx=10, pady=10)
-        self.toggleRecordBtn.grid(pady=10)
+        self.textField.grid(row=0, column=0, padx=(10, 0), pady=10)
+        self.commandsTable.grid(row=0, column=1, padx=(10, 0), pady=10)
+        self.toggleRecordBtn.grid()
         self.clearTextBtn.grid(pady=10)
         self.checkbox.grid()
 

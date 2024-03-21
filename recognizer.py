@@ -33,7 +33,3 @@ class Recognizer:
                 answer = json.loads(self.rec.Result())
                 if answer['text']: 
                   text_printer_fn(answer['text'])
-
-            # if (self.rec.AcceptWaveform(data)) :
-            #     answer = json.loads(self.rec.Result())
-            #     text_printer_fn(answer)

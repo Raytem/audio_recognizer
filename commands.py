@@ -1,7 +1,6 @@
 from enum import Enum
 
 class Commands(Enum):
-    EXIT = 'завершить работу'
-    INC_VOLUME = 'увеличь звук'
-    DEC_VOLUME = 'уменьши звук'
+    INC_VOLUME = 'увеличь громкость'
+    DEC_VOLUME = 'уменьши громкость'
     OPEN_BROWSER = 'открой браузер'

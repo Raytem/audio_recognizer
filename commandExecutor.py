@@ -1,19 +1,16 @@
 import webbrowser
 from commands import Commands
-# from ctypes import cast, POINTER
-# from comtypes import CLSCTX_ALL
-# from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+from volumeController import VolumeController
 
 class CommandExecutor:
     def __init__(self):
-        pass
+        self.volController = VolumeController()
 
     def execute_command(self, app, command: str):
         if (any(com.value == command for com in list(Commands))):
             match command:
-                case Commands.EXIT.value: self.exit_program(app)
-                case Commands.INC_VOLUME.value: pass
-                case Commands.DEC_VOLUME.value: pass
+                case Commands.INC_VOLUME.value: self.volController.inc_volume()
+                case Commands.DEC_VOLUME.value: self.volController.dec_volume()
                 case Commands.OPEN_BROWSER.value: self.open_browser()
 
     def open_browser(self):
@@ -21,6 +18,5 @@ class CommandExecutor:
         pass
 
     def exit_program(self, app):
-        app.quit()
-
-    
+        # app.quit()
+        pass
